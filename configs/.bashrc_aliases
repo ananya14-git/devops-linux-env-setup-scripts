@@ -1,0 +1,68 @@
+# ---------- Custom Aliases for DevOps ----------
+
+# System aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git log --oneline --graph --all'
+alias gd='git diff'
+alias gco='git checkout'
+
+# Docker aliases (will work after Docker installation)
+alias d='docker'
+alias dc='docker-compose'
+alias dps='docker ps'
+alias dim='docker images'
+alias drm='docker rm $(docker ps -aq)'  # Remove all stopped containers
+alias drmi='docker rmi $(docker images -q)'  # Remove all images
+
+# Kubernetes aliases (will work after K8s installation)
+alias k='kubectl'
+alias kg='kubectl get'
+alias kgp='kubectl get pods'
+alias kgs='kubectl get services'
+alias kgd='kubectl get deployments'
+alias kl='kubectl logs'
+alias kx='kubectl exec -it'
+
+# Network aliases
+alias myip='curl -s ifconfig.me'
+alias ports='netstat -tulanp'
+alias ping='ping -c 5'
+
+# System update
+alias update='sudo apt update && sudo apt upgrade -y'  # Debian/Ubuntu
+alias update-rpm='sudo yum update -y'                  # RHEL/CentOS
+
+# Directory shortcuts
+alias dev='cd ~/dev'
+alias projects='cd ~/projects'
+
+# Useful shortcuts
+alias h='history'
+alias j='jobs -l'
+alias df='df -h'
+alias du='du -h'
+alias free='free -m'
+
+# DevOps tool shortcuts
+alias jenkins-start='sudo systemctl start jenkins'
+alias jenkins-stop='sudo systemctl stop jenkins'
+alias jenkins-status='sudo systemctl status jenkins'
+alias docker-start='sudo systemctl start docker'
+alias docker-status='sudo systemctl status docker'
+
+# Safety features
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# ---------- End of Aliases ----------
